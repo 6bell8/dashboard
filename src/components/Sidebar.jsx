@@ -16,7 +16,6 @@ const Sidebar = () => {
       {activeMenu && (
         <>
           <div className="flex justify-between items-center">
-            <span>박진성</span>
           </div>
         </>
       )}
