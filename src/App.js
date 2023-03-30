@@ -29,7 +29,8 @@ import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
 
 const App = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings, currentColor } =
+    useStateContext();
 
   return (
     <div>
@@ -40,7 +41,8 @@ const App = () => {
               <button
                 type="button"
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
-                style={{ background: "blue", borderRadius: "50%" }}
+                style={{ background: currentColor, borderRadius: "50%" }}
+                onClick={() => setThemeSettings(true)}
               >
                 <FiSettings />
               </button>
@@ -69,6 +71,9 @@ const App = () => {
             </div>
 
             <div>
+              {/* true/true 나 string 아니면 무조건 false라서 두번째로 넘어감  */}
+              {themeSettings && <ThemeSettings />}
+
               <Routes>
                 {/* Dashboard */}
                 <Route path="/" element={<Ecommerce />}></Route>

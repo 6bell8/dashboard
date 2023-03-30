@@ -10,7 +10,7 @@ import { useStateContext } from "../contexts/ContextProvider";
 
 const Ecommerce = () => {
   return (
-    <div className="mt-12">
+    <div className="mt-12 ml-10 mr-10">
       <div className="flex flex-wrap lg:flex-nowrap justify-center border-2 rounded-2xl">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
@@ -98,15 +98,26 @@ const Ecommerce = () => {
               </div>
               <div className="mt-5">
                 <SparkLine
-                  currentColor="blue"
-                  id="line-sparkline"
+                  currentColor="powderblue"
+                  id="line-sparkLine"
                   type="Line"
                   height="80px"
                   width="250px"
-                  dat={SparklineAreaData}
+                  data={SparklineAreaData}
                   color="powderblue"
                 />
               </div>
+              <div className="mt-10">
+                <Button
+                  color="white"
+                  bgColor="powderblue"
+                  text="Download Report"
+                  borderRadius="10px"
+                />
+              </div>
+            </div>
+            <div>
+              <Stacked width="320px" height="360px" />
             </div>
           </div>
         </div>
