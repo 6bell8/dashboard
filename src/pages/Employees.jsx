@@ -23,6 +23,7 @@ const Employees = () => {
 
       {/* inject를 통해서 필요한 syncfusion 속성 추가 */}
       {/* Search, toolbar는 항상 같이 */}
+      {/* ts에서 찾아서 페이지 프로퍼티 삽입 */}
       <GridComponent
         id="gridcomp"
         dataSource={employeesData}
@@ -30,6 +31,7 @@ const Employees = () => {
         allowSorting
         toolbar={["Search"]}
         width="auto"
+        pageSettings={{ pageSize: 10 }}
       >
         <ColumnsDirective>
           {employeesGrid.map((item, index) => (

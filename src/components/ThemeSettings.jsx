@@ -66,7 +66,6 @@ const ThemeSettings = () => {
                 content={item.name}
                 position="TopCenter"
               >
-                {" "}
                 <div className="relative mt-2 cursor-pointer flex gap-5 items-center">
                   <button
                     type="button"
