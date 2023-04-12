@@ -11,7 +11,7 @@ import avatar from "../data/avatar.jpg";
 import { Cart, Chat, Notification, UserProfile } from ".";
 import { useStateContext } from "../contexts/ContextProvider";
 
-// ()로 컴포넌트 만들어서 전달, icon에서 속성만 바꿔서 사용할 때 필요
+// ()로 컴포넌트 만들어서 전달, icon에서 속성만 바꿔서 사용할 때 필요하다.
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
     <button
